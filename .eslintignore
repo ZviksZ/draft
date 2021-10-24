@@ -5,3 +5,7 @@ yarn.lock
 package-lock.json
 public
 .idea
+
+jest.setup.js
+
+__tests__/test-utils.js

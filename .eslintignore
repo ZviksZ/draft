@@ -1,6 +1,3 @@
-node_modules/
-package-lock.json
-.prettierignore
 .next
 next-env.d.ts
 node_modules

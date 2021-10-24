@@ -1,5 +1,5 @@
 {
-  "extends": "next",
+  "extends": ["next", "next/core-web-vitals", "prettier"],
   "rules": {
     "no-unreachable": "error",
     "no-console": "warn",
@@ -19,5 +19,6 @@
   "parserOptions": {
     "project": "tsconfig.json",
     "sourceType": "module"
-  }
+  },
+  "ignorePatterns": ["**/*.config.js"]
 }

@@ -8,3 +8,9 @@ yarn.lock
 package-lock.json
 public
 .idea
+coverage
+
+setupTests.js
+jest.config.js
+.babelrc
+__tests__/mocks/styleMock.js

@@ -6,6 +6,7 @@ package-lock.json
 public
 .idea
 
-jest.setup.js
-
-__tests__/test-utils.js
+setupTests.js
+jest.config.js
+.babelrc
+__tests__/mocks/styleMock.js

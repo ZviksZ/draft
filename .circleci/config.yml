@@ -10,7 +10,6 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      # install dependencies
       - run:
           name: Install Dependencies
           command: yarn install
@@ -28,7 +27,7 @@ workflows:
   commit:
     jobs:
       - build
-      - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
+      - heroku/deploy-via-git:
           requires:
             - build
           filters:

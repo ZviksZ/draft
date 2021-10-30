@@ -6,7 +6,8 @@
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
       "@store/*": ["store/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@server/*": ["server/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

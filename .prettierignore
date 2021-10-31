@@ -14,3 +14,6 @@ setupTests.js
 jest.config.js
 .babelrc
 __tests__/mocks/styleMock.js
+
+tailwind.config.js
+postcss.config.js

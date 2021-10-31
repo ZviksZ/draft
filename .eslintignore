@@ -12,3 +12,6 @@ jest.config.js
 __tests__/mocks/styleMock.js
 
 dist
+
+tailwind.config.js
+postcss.config.js

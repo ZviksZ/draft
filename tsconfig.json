@@ -3,11 +3,12 @@
     "baseUrl": ".",
     "target": "es5",
     "paths": {
-      "@components/*": ["components/*"],
-      "@pages/*": ["pages/*"],
-      "@store/*": ["store/*"],
-      "@styles/*": ["styles/*"],
-      "@server/*": ["server/*"]
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@store/*": ["src/store/*"],
+      "@styles/*": ["src/styles/*"],
+      "@public/*": ["src/public/*"],
+      "@server/*": ["src/server/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

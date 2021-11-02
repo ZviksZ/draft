@@ -41,7 +41,7 @@ const Login: NextPage = () => {
       </Form.Item>
 
       <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-        <Button type="primary" htmlType="submit">
+        <Button type="primary" htmlType="submit" className="tw-bg-gray-300">
           Submit
         </Button>
       </Form.Item>

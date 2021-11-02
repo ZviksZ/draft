@@ -13,13 +13,15 @@ app.prepare().then(() => {
   const server = new Koa();
   const router = new Router();
 
+  router.get("/111", async (ctx: Context) => {
+    ctx.body = {
+      data: "1",
+    };
+  });
+
   router.all("(.*)", async (ctx: Context) => {
     await handle(ctx.req, ctx.res);
     ctx.respond = false;
-  });
-  server.use(async (ctx: Context, next: () => Promise<any>) => {
-    ctx.res.statusCode = 200;
-    await next();
   });
 
   server.use(router.routes());

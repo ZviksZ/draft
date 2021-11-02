@@ -20,10 +20,7 @@ export function AppLink({
   const isActive = router.pathname === props.href;
   return (
     <Link {...props}>
-      <a
-        data-testId={testId}
-        className={classNames("tw-text-black", className, isActive && activeClassName)}
-      >
+      <a className={classNames("tw-text-black", className, isActive && activeClassName)}>
         {props.children}
       </a>
     </Link>

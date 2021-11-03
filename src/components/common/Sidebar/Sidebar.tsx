@@ -1,6 +1,6 @@
 import React from "react";
-import { AppLink } from "src/components/atoms/AppLink";
-import { Routes } from "src/enums/routes";
+import { AppLink } from "components/atoms/AppLink";
+import { Routes } from "enums/routes";
 
 interface SidebarProps {}
 

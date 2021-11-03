@@ -7,8 +7,9 @@ module.exports = {
   testEnvironment: "jsdom",
   moduleNameMapper: {
     "\\.(css|less|scss|sass)$": "<rootDir>/__tests__/mocks/styleMock.js",
-    "^@pages/(.*)$": "<rootDir>/pages/$1",
-    "^@components/(.*)$": "<rootDir>/components/$1",
-    "^@styles/(.*)$": "<rootDir>/styles/$1",
+    "^pages/(.*)$": "<rootDir>/src/pages/$1",
+    "^components/(.*)$": "<rootDir>/src/components/$1",
+    "^styles/(.*)$": "<rootDir>/src/styles/$1",
+    "^enums/(.*)$": "<rootDir>/src/enums/$1",
   },
 };

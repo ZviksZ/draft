@@ -39,8 +39,9 @@ export function SidebarLink({ testId = "", href, isActive, ...props }: SidebarLi
   return (
     <Link {...props} href={href}>
       <a
-        className={classNames(" tw-px-4 tw-w-full", {
-          "tw-text-white tw-w-full hover:tw-text-white": !isActive,
+        className={classNames(" tw-p-4 tw-w-full tw-transition tw-duration-300 tw-ease-in-out", {
+          "tw-text-white tw-w-full hover:tw-text-white hover:tw-bg-white hover:tw-text-black":
+            !isActive,
           "tw-bg-white tw-text-black hover:tw-text-black": isActive,
         })}
       >

@@ -5,11 +5,8 @@ module.exports = {
     "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
   },
   testEnvironment: "jsdom",
+  modulePaths: ["node_modules","<rootDir>/src"],
   moduleNameMapper: {
     "\\.(css|less|scss|sass)$": "<rootDir>/__tests__/mocks/styleMock.js",
-    "^pages/(.*)$": "<rootDir>/src/pages/$1",
-    "^components/(.*)$": "<rootDir>/src/components/$1",
-    "^styles/(.*)$": "<rootDir>/src/styles/$1",
-    "^enums/(.*)$": "<rootDir>/src/enums/$1",
   },
 };

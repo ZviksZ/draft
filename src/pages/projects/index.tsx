@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import MainLayout from "components/hoc/MainLayout";
+import MainLayout from "components/Layouts/MainLayout";
 
 const Home: NextPage = () => {
   return (

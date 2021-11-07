@@ -31,14 +31,14 @@ export function Sidebar({}: SidebarProps) {
 
 interface SidebarLinkProps extends React.PropsWithChildren<LinkProps> {
   href: string;
-  testId?: string;
   isActive: boolean;
 }
 
-export function SidebarLink({ testId = "", href, isActive, ...props }: SidebarLinkProps) {
+export function SidebarLink({ href, isActive, ...props }: SidebarLinkProps) {
   return (
     <Link {...props} href={href}>
       <a
+        data-testid="sidebar-link"
         className={classNames(" tw-p-4 tw-w-full tw-transition tw-duration-300 tw-ease-in-out", {
           "tw-text-white tw-w-full hover:tw-bg-white hover:tw-text-black": !isActive,
           "tw-bg-white tw-text-black hover:tw-text-black": isActive,

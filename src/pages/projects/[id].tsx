@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import MainLayout from "components/hoc/MainLayout";
+import MainLayout from "components/Layouts/MainLayout";
 
 const ProjectDetail: NextPage = () => {
   return (

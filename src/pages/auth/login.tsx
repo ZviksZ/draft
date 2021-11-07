@@ -1,51 +1,40 @@
 import { NextPage } from "next";
-import { Form, Input, Button, Checkbox } from "antd";
+import { Button, ButtonSize, ButtonStyle, ButtonVariant } from "components/atoms/Button/Button";
+import { Form } from "components/Form/Form";
+import { SubmitHandler, useForm } from "react-hook-form";
+
+type Inputs = {
+  example: string;
+  exampleRequired: string;
+};
 
 const Login: NextPage = () => {
-  const onFinish = (values: any) => {
-    console.log("Success:", values);
-  };
-
-  const onFinishFailed = (errorInfo: any) => {
-    console.log("Failed:", errorInfo);
-  };
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
+  console.log(watch("example"));
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
   return (
-    <Form
-      name="basic"
-      labelCol={{ span: 8 }}
-      wrapperCol={{ span: 16 }}
-      initialValues={{ remember: true }}
-      onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
-      autoComplete="off"
-    >
-      <Form.Item
-        label="Username"
-        name="username"
-        rules={[{ required: true, message: "Please input your username!" }]}
-      >
-        <Input />
-      </Form.Item>
-
-      <Form.Item
-        label="Password"
-        name="password"
-        rules={[{ required: true, message: "Please input your password!" }]}
-      >
-        <Input.Password />
-      </Form.Item>
-
-      <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
-        <Checkbox>Remember me</Checkbox>
-      </Form.Item>
-
-      <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-        <Button type="primary" htmlType="submit" className="tw-bg-gray-300">
+    <div className="tw-w-full tw-h-screen tw-flex tw-items-center tw-justify-center">
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        <input type="text" defaultValue="test" {...register("example")} />
+        <input type="text" {...register("exampleRequired", { required: true })} />
+        {errors.exampleRequired && <span>This field is required</span>}
+        <Button
+          onClick={() => false}
+          type={"submit"}
+          style={ButtonStyle.default}
+          variant={ButtonVariant.rounded}
+          size={ButtonSize.xl}
+        >
           Submit
         </Button>
-      </Form.Item>
-    </Form>
+      </Form>
+    </div>
   );
 };
 

@@ -14,7 +14,7 @@ export function Sidebar({}: SidebarProps) {
   return (
     <div className="tw-flex tw-items-start tw-flex-col tw-w-48 tw-h-full tw-shadow-inner tw-bg-gray-900">
       <div className="tw-p-4 tw-text-2xl tw-text-white tw-uppercase tw-font-extrabold">Draft</div>
-      <div className="tw-w-full tw-flex tw-flex-col tw-items-start tw-space-y-3">
+      <div className="tw-w-full tw-flex tw-flex-col tw-items-start tw-space-y-3 tw-mt-8">
         {Routes.map((route) => (
           <SidebarLink
             key={route.path}
@@ -40,8 +40,7 @@ export function SidebarLink({ testId = "", href, isActive, ...props }: SidebarLi
     <Link {...props} href={href}>
       <a
         className={classNames(" tw-p-4 tw-w-full tw-transition tw-duration-300 tw-ease-in-out", {
-          "tw-text-white tw-w-full hover:tw-text-white hover:tw-bg-white hover:tw-text-black":
-            !isActive,
+          "tw-text-white tw-w-full hover:tw-bg-white hover:tw-text-black": !isActive,
           "tw-bg-white tw-text-black hover:tw-text-black": isActive,
         })}
       >

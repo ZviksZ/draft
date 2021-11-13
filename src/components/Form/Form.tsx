@@ -7,7 +7,7 @@ interface FormProps {
 
 export function Form({ children, onSubmit }: FormProps) {
   return (
-    <form onSubmit={onSubmit} className="tw-flex tw-flex-col tw-w-full tw-p-4">
+    <form onSubmit={onSubmit} className="tw-flex tw-flex-col tw-w-full tw-p-4 tw-space-y-8">
       {children}
     </form>
   );

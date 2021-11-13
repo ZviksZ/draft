@@ -1,3 +1,4 @@
+import "./internal/db";
 import { Context } from "koa";
 
 const Koa = require("koa");
@@ -9,7 +10,7 @@ const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-app.prepare().then(() => {
+app.prepare().then(async () => {
   const server = new Koa();
   const router = new Router();
 

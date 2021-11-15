@@ -1,11 +1,8 @@
 import { Sequelize } from "sequelize";
 
-const sequelize = new Sequelize({
-  dialect: "postgres",
-  port: 5433,
-  username: process.env.DATABASE_USER,
-  password: process.env.DATABASE_PASSWORD,
-  database: process.env.DATABASE_NAME,
+const sequelize = new Sequelize("draft_db", "root", "", {
+  host: "127.0.0.1",
+  dialect: "mysql",
 });
 
 async function startDB() {

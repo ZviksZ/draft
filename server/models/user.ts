@@ -1,10 +1,13 @@
-import { Table, Column, Model, HasMany } from "sequelize-typescript";
+import { Table, Model, Column } from "sequelize-typescript";
+import { UserAttributes } from "./interfaces";
 
-@Table
-export class Person extends Model {
+@Table({
+  timestamps: true,
+})
+export default class User extends Model<UserAttributes> {
   @Column
-  name: string;
+  name!: string;
 
   @Column
-  birthday: Date;
+  email!: string;
 }
